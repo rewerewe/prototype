@@ -8,8 +8,8 @@
 ---
 
 ## 2. 설치
-* [OpenJdk 1.8](https://github.com/ojdkbuild/ojdkbuild) : Java 개발 필수.
-* [Spring Tools Suite 4](https://spring.io/tools) : Spring Boot 개발용.
+* [OpenJdk 1.8](https://github.com/ojdkbuild/ojdkbuild) : Java 개발이나 실행 시 필수.
+* [Spring Tools Suite 4](https://spring.io/tools) : Spring Boot 개발 도구.
 
 ---
 

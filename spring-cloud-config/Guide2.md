@@ -8,7 +8,7 @@
 ---
 
 ## 2. 설치
-* [OpenJdk 1.8](https://github.com/ojdkbuild/ojdkbuild) : Java 개발 필수.
+* [OpenJdk 1.8](https://github.com/ojdkbuild/ojdkbuild) : Java 개발이나 실행 시 필수.
 
 ---
 

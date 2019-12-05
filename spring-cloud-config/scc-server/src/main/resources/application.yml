@@ -7,4 +7,4 @@ spring:
       server:
         git:
           uri: https://github.com/idealful/prototype # Github URI
-          searchPaths: config # 설정 폴더 위치
+          searchPaths: spring-cloud-config/config # Path

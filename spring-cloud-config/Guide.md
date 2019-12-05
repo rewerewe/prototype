@@ -80,7 +80,7 @@ spring:
       server:
         git:
           uri: https://github.com/idealful/prototype # Github URI
-          searchPaths: config # 설정 폴더 위치
+          searchPaths: spring-cloud-config/config # Path
 ```
 * 실행 파일에 설정 어노테이션 추가 : /scc-server/src/main/java/com/example/demo/SccServerApplication.java
 ```

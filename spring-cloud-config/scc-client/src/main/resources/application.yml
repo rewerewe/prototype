@@ -1,0 +1,15 @@
+#server:
+#  port: 10001 # scc-client port
+#
+#spring:
+#  application:
+#    name: scc # App Name 설정 : scc.yml
+#  cloud:
+#    config:
+#      profile: conf1 # Cloud Config Profile 설정 : scc-conf1.yml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "refresh" # 갱신

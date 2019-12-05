@@ -1,0 +1,10 @@
+#server:
+#  port: 10000 # scc-server port
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/idealful/prototype # Github URI
+          searchPaths: config # 설정 폴더 위치

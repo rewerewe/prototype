@@ -202,7 +202,7 @@ server:
 ```
 curl -X POST http://localhost:10001/actuator/refresh
 ```
-* 결과 메시지가 ["config.client.version","server.type.name"] 가 나오면 성공.
+* 결과 메시지에 ["config.client.version","server.type.name"] 가 나오면 성공.
 * 만약 'No message available' 에러 메시지가 발생하면 scc-client를 마우스 우클릭해서 Gradle > Refresh Gradle Project를 수동 실행해야 함.
 
 ### Client 설정 검증 : 성공

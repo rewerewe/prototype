@@ -1,0 +1,15 @@
+spring: 
+    profiles: 
+        active: local
+---
+spring: 
+    profiles: local
+    task: 
+        fixedDelay: 2000
+        name: testLocal
+---
+spring: 
+    profiles: dev
+    task: 
+        fixedDelay: 1000
+        name: testLocal

@@ -1,0 +1,61 @@
+* {
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.calculator {
+    cursor: pointer;
+}
+
+.calculator tbody tr td {
+    border: 1px solid #000000;
+    border-radius: 18px;
+    text-align: center;
+    width: 140px;
+    height: 60px;
+}
+
+#btnProcess {
+    padding: 0 10px 0 0;
+}
+
+.btnClear {
+    background-color: #a7aab1;
+}
+
+.btnInput, .btnResult {
+    background-color: #363439;
+}
+
+.btnOperator {
+    background-color: #ff8e02;
+}
+
+.tac {
+    text-align: center !important;
+}
+
+.tar {
+    text-align: right !important;
+}
+
+.csd {
+    cursor: default;
+}
+
+.fs30 {
+    font-size: 30px !important;
+}
+
+/* Animation Blink */
+.blink {
+    animation-name: blink;
+    animation-duration: 0.09s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes blink {
+    to { background-color: #ffffff}
+}

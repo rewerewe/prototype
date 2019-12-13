@@ -1,8 +1,26 @@
+/*
+Nico's Command Sequence
+
+9+5=14
+C
+
+9-6=3
+C
+
+78*2=156
+C
+
+52/6=8.666666
+C
+
+2*2=4 *2=8 *2=16 *2=32 *2=64 *2=128 *2=256 *2=512
+C
+*/
+
 const BTN_PROCESS = document.querySelector('#btnProcess');
 const BTN_CLEAR = document.querySelector('.btnClear');
 const BTN_INPUT_ALL = document.querySelectorAll('.btnInput');
 const BTN_OPERATOR_ALL = document.querySelectorAll('.btnOperator');
-const BTN_OPERATOR_MUL_ALL = document.querySelectorAll('.btnOperatorMul');
 const BTN_RESULT = document.querySelector('.btnResult');
 let operatingMode = 0;
 let processArr = [];
@@ -30,16 +48,21 @@ function btnInputClick(event) {
 
     let currentVal = event.target.textContent;
     processArr.push(currentVal);
-    
-    if (operatingMode == '0') { // 사용자가 추가 숫자 버튼을 누른 상태
-        BTN_PROCESS.innerText = processArr.join('');
-    } else if (operatingMode == '1') { // 사용자가 연산자 버튼을 누른 상태
-        // BTN_PROCESS.innerText = processArr.join('');
-        BTN_PROCESS.innerText = currentVal;
 
-        operatingMode = '0';
+    if (operatingMode == 0) { // 사용자가 추가 숫자 버튼을 누른 상태
+        BTN_PROCESS.innerText = processArr.join('');
+    } else if (operatingMode == 1) { // 사용자가 연산자 버튼을 누른 상태
+        BTN_PROCESS.innerText = currentVal;
+        operatingMode = 0;
     } else { // 사용자가 * 연산자 버튼을 누른 상태
-        BTN_PROCESS.innerText = eval(processArr.join(''));
+        if (processArr.length >= 2) {
+            if (processArr[1] == '*' && processArr[0] == currentVal) {
+                BTN_PROCESS.innerText = eval(processArr.join(''));
+            } else {
+                BTN_PROCESS.innerText = currentVal;
+                operatingMode = 0;
+            }
+        }
     }
 }
 
@@ -50,9 +73,9 @@ function btnOperatorClick(event) {
     processArr.push(currentVal);
 
     if (currentVal != '*') {
-        operatingMode = '1';
+        operatingMode = 1; // Operating Mode
     } else {
-        operatingMode = '2';
+        operatingMode = 2; // Square Mode
     }
 }
 
@@ -74,11 +97,6 @@ function init() {
 
     // 2. 여러 element에 이벤트 리스너 추가 방법2
     BTN_OPERATOR_ALL.forEach(BTN_OPERATOR => {
-        BTN_OPERATOR.addEventListener('click', btnOperatorClick);
-    });
-
-    // 2. 여러 element에 이벤트 리스너 추가 방법2
-    BTN_OPERATOR_MUL_ALL.forEach(BTN_OPERATOR => {
         BTN_OPERATOR.addEventListener('click', btnOperatorClick);
     });
 
